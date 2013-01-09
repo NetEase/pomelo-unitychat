@@ -42,7 +42,7 @@ public class LoginGUI : MonoBehaviour {
 	
 	//Login the chat application and new PomeloClient.
 	void Login() {
-		string url = "http://127.0.0.1:3014";
+		string url = "http://114.113.202.141:3088";
 		pclient = new PomeloClient(url);
 		pclient.init();
 		JsonObject userMessage = new JsonObject();
@@ -57,7 +57,7 @@ public class LoginGUI : MonoBehaviour {
 					pclient = null;
 					System.Object host, port;
 					if (data.TryGetValue("host", out host) && data.TryGetValue("port", out port)) {
-						pclient = new PomeloClient("http://" + host.ToString() + ":" + port.ToString());
+						pclient = new PomeloClient("http://" + "114.113.202.141" + ":" + port.ToString());
 						pclient.init();
 						Entry();
 					}

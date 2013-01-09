@@ -25,13 +25,15 @@ using pomeloUnityClient;
 		
 		public static string inputField = "";
 		
-		private ArrayList chatRecords = new ArrayList();
-		private ArrayList userList = new ArrayList();
+		private ArrayList chatRecords = null; 
+		private ArrayList userList = null; 
 	
 		public bool debug = true;
 	
 		void Start() 
 	    {
+			chatRecords = new ArrayList();
+			userList = new ArrayList();
 			chatWindow = new Rect(0, 0, Screen.width - 150, Screen.height);
 			usersWindow = new Rect(Screen.width - 150, 0, 200, Screen.height);
 			pomelo_label_Style.normal.textColor = Color.black;
